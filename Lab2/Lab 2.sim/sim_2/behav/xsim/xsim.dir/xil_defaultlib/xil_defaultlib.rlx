@@ -1,0 +1,8 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+C:/Users/jimar/Desktop/digital lab/lab 2/Lab 2/Lab 2.sim/sim_2/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+C:/Users/jimar/Desktop/digital lab/lab 2/RTL/part A/part A.v,1669391376,verilog,,C:/Users/jimar/Desktop/digital lab/lab 2/RTL/part B/part B.v,,Baud_controller,,,,,,,,
+C:/Users/jimar/Desktop/digital lab/lab 2/RTL/part B/part B.v,1669511794,verilog,,C:/Users/jimar/Desktop/digital lab/lab 2/RTL/part B/testbench_B.v,,uart_transmitter,,,,,,,,
+C:/Users/jimar/Desktop/digital lab/lab 2/RTL/part B/testbench_B.v,1669560501,verilog,,,,testbench,,,,,,,,

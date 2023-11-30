@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimar/Desktop/digital lab/lab 2/Lab 2/Lab 2.sim/sim_1/synth/func/xsim/testbench_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Baud_controller
+INFO: [VRFC 10-311] analyzing module uart_transmitter
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimar/Desktop/digital lab/lab 2/RTL/part B/testbench_B.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench

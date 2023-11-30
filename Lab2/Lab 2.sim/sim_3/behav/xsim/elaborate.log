@@ -1,0 +1,23 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 4a833a90ecd649c283da467cdc9976f7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_D_behav xil_defaultlib.testbench_D xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/jimar/Desktop/digital_lab/lab2/part_D.v" Line 2. Module UART2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/jimar/Desktop/digital_lab/lab2/partB v3.v" Line 3. Module uart_transmitter doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/jimar/Desktop/digital_lab/lab2/RTL/part A/part A.v" Line 2. Module Baud_controller doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/jimar/Desktop/digital_lab/lab2/partC2.v" Line 4. Module uart_reciever doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/jimar/Desktop/digital_lab/lab2/RTL/part A/part A.v" Line 2. Module Baud_controller doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/jimar/Desktop/digital_lab/lab2/SIPO.v" Line 2. Module SIPO doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Baud_controller
+Compiling module xil_defaultlib.uart_transmitter
+Compiling module xil_defaultlib.SIPO
+Compiling module xil_defaultlib.uart_reciever
+Compiling module xil_defaultlib.UART2
+Compiling module xil_defaultlib.testbench_D
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_D_behav

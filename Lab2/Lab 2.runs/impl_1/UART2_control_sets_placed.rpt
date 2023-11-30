@@ -1,0 +1,76 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Nov 30 02:52:00 2022
+| Host         : DESKTOP-CDFLI62 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file UART2_control_sets_placed.rpt
+| Design       : UART2
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |     8 |
+| Unused register locations in slices containing registers |    35 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            1 |
+|      4 |            3 |
+|      8 |            1 |
+|     11 |            1 |
+|    16+ |            2 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               2 |            2 |
+| No           | No                    | Yes                    |              35 |           11 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              48 |           15 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+--------------------------------------------------------------------------------+------------------+------------------+----------------+
+|  Clock Signal  |                                  Enable Signal                                 | Set/Reset Signal | Slice Load Count | Bel Load Count |
++----------------+--------------------------------------------------------------------------------+------------------+------------------+----------------+
+|  clk_IBUF_BUFG |                                                                                |                  |                2 |              2 |
+|  clk_IBUF_BUFG | uart_reciever_init/Baud_controller_tx_inst/E[0]                                | reset_IBUF       |                1 |              4 |
+|  clk_IBUF_BUFG | uart_reciever_init/Baud_controller_tx_inst/FSM_onehot_current_state_reg[11][0] | reset_IBUF       |                1 |              4 |
+|  clk_IBUF_BUFG | uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_i_1[0]           | reset_IBUF       |                1 |              4 |
+|  clk_IBUF_BUFG | uart_reciever_init/Sipo_inst/tmp_0                                             | reset_IBUF       |                2 |              8 |
+|  clk_IBUF_BUFG | uart_transmitter_init/FSM_onehot_current_state[13]_i_1__0_n_0                  | reset_IBUF       |                2 |             11 |
+|  clk_IBUF_BUFG | uart_reciever_init/FSM_onehot_current_state[16]_i_1_n_0                        | reset_IBUF       |                8 |             17 |
+|  clk_IBUF_BUFG |                                                                                | reset_IBUF       |               11 |             35 |
++----------------+--------------------------------------------------------------------------------+------------------+------------------+----------------+
+
+

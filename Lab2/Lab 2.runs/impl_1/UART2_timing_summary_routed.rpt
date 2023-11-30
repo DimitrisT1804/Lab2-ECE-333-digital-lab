@@ -1,0 +1,1468 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Nov 30 02:52:23 2022
+| Host         : DESKTOP-CDFLI62 running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file UART2_timing_summary_routed.rpt -pb UART2_timing_summary_routed.pb -rpx UART2_timing_summary_routed.rpx -warn_on_violation
+| Design       : UART2
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 15 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 12 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      5.258        0.000                      0                  133        0.168        0.000                      0                  133        4.500        0.000                       0                    86  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock    Waveform(ns)       Period(ns)      Frequency(MHz)
+-----    ------------       ----------      --------------
+sys_clk  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clk             5.258        0.000                      0                  133        0.168        0.000                      0                  133        4.500        0.000                       0                    86  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk
+  To Clock:  sys_clk
+
+Setup :            0  Failing Endpoints,  Worst Slack        5.258ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.168ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             5.258ns  (required time - arrival time)
+  Source:                 uart_transmitter_init/Baud_controller_tx_inst/counter_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            uart_transmitter_init/Baud_controller_tx_inst/counter_reg[13]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk rise@10.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        4.742ns  (logic 2.863ns (60.373%)  route 1.879ns (39.627%))
+  Logic Levels:           9  (CARRY4=7 LUT2=1 LUT6=1)
+  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.035ns = ( 15.035 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.336ns
+    Clock Pessimism Removal (CPR):    0.275ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          1.733     5.336    uart_transmitter_init/Baud_controller_tx_inst/clk_IBUF_BUFG
+    SLICE_X86Y52         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X86Y52         FDCE (Prop_fdce_C_Q)         0.456     5.792 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[3]/Q
+                         net (fo=2, routed)           0.753     6.545    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[3]
+    SLICE_X88Y54         LUT6 (Prop_lut6_I2_O)        0.124     6.669 r  uart_transmitter_init/Baud_controller_tx_inst/check1_carry_i_3/O
+                         net (fo=1, routed)           0.000     6.669    uart_transmitter_init/Baud_controller_tx_inst/check1_carry_i_3_n_0
+    SLICE_X88Y54         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     7.202 r  uart_transmitter_init/Baud_controller_tx_inst/check1_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.202    uart_transmitter_init/Baud_controller_tx_inst/check1_carry_n_0
+    SLICE_X88Y55         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.319 r  uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.319    uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_n_0
+    SLICE_X88Y56         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.229     7.548 f  uart_transmitter_init/Baud_controller_tx_inst/check1_carry__1/CO[2]
+                         net (fo=20, routed)          1.126     8.674    uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_i_1[0]
+    SLICE_X86Y52         LUT2 (Prop_lut2_I1_O)        0.310     8.984 r  uart_transmitter_init/Baud_controller_tx_inst/counter[0]_i_6/O
+                         net (fo=1, routed)           0.000     8.984    uart_transmitter_init/Baud_controller_tx_inst/counter[0]_i_6_n_0
+    SLICE_X86Y52         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.516 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.516    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[0]_i_1_n_0
+    SLICE_X86Y53         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.630 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.630    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[4]_i_1_n_0
+    SLICE_X86Y54         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.744 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.744    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[8]_i_1_n_0
+    SLICE_X86Y55         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.078 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]_i_1/O[1]
+                         net (fo=1, routed)           0.000    10.078    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]_i_1_n_6
+    SLICE_X86Y55         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          1.612    15.035    uart_transmitter_init/Baud_controller_tx_inst/clk_IBUF_BUFG
+    SLICE_X86Y55         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[13]/C
+                         clock pessimism              0.275    15.310    
+                         clock uncertainty           -0.035    15.274    
+    SLICE_X86Y55         FDCE (Setup_fdce_C_D)        0.062    15.336    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[13]
+  -------------------------------------------------------------------
+                         required time                         15.336    
+                         arrival time                         -10.078    
+  -------------------------------------------------------------------
+                         slack                                  5.258    
+
+Slack (MET) :             5.353ns  (required time - arrival time)
+  Source:                 uart_transmitter_init/Baud_controller_tx_inst/counter_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            uart_transmitter_init/Baud_controller_tx_inst/counter_reg[14]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk rise@10.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        4.647ns  (logic 2.768ns (59.563%)  route 1.879ns (40.437%))
+  Logic Levels:           9  (CARRY4=7 LUT2=1 LUT6=1)
+  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.035ns = ( 15.035 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.336ns
+    Clock Pessimism Removal (CPR):    0.275ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          1.733     5.336    uart_transmitter_init/Baud_controller_tx_inst/clk_IBUF_BUFG
+    SLICE_X86Y52         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X86Y52         FDCE (Prop_fdce_C_Q)         0.456     5.792 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[3]/Q
+                         net (fo=2, routed)           0.753     6.545    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[3]
+    SLICE_X88Y54         LUT6 (Prop_lut6_I2_O)        0.124     6.669 r  uart_transmitter_init/Baud_controller_tx_inst/check1_carry_i_3/O
+                         net (fo=1, routed)           0.000     6.669    uart_transmitter_init/Baud_controller_tx_inst/check1_carry_i_3_n_0
+    SLICE_X88Y54         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     7.202 r  uart_transmitter_init/Baud_controller_tx_inst/check1_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.202    uart_transmitter_init/Baud_controller_tx_inst/check1_carry_n_0
+    SLICE_X88Y55         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.319 r  uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.319    uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_n_0
+    SLICE_X88Y56         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.229     7.548 f  uart_transmitter_init/Baud_controller_tx_inst/check1_carry__1/CO[2]
+                         net (fo=20, routed)          1.126     8.674    uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_i_1[0]
+    SLICE_X86Y52         LUT2 (Prop_lut2_I1_O)        0.310     8.984 r  uart_transmitter_init/Baud_controller_tx_inst/counter[0]_i_6/O
+                         net (fo=1, routed)           0.000     8.984    uart_transmitter_init/Baud_controller_tx_inst/counter[0]_i_6_n_0
+    SLICE_X86Y52         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.516 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.516    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[0]_i_1_n_0
+    SLICE_X86Y53         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.630 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.630    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[4]_i_1_n_0
+    SLICE_X86Y54         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.744 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.744    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[8]_i_1_n_0
+    SLICE_X86Y55         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     9.983 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]_i_1/O[2]
+                         net (fo=1, routed)           0.000     9.983    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]_i_1_n_5
+    SLICE_X86Y55         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          1.612    15.035    uart_transmitter_init/Baud_controller_tx_inst/clk_IBUF_BUFG
+    SLICE_X86Y55         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[14]/C
+                         clock pessimism              0.275    15.310    
+                         clock uncertainty           -0.035    15.274    
+    SLICE_X86Y55         FDCE (Setup_fdce_C_D)        0.062    15.336    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[14]
+  -------------------------------------------------------------------
+                         required time                         15.336    
+                         arrival time                          -9.983    
+  -------------------------------------------------------------------
+                         slack                                  5.353    
+
+Slack (MET) :             5.355ns  (required time - arrival time)
+  Source:                 uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            uart_transmitter_init/Baud_controller_tx_inst/counter_reg[9]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk rise@10.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        4.647ns  (logic 2.612ns (56.211%)  route 2.035ns (43.789%))
+  Logic Levels:           7  (CARRY4=5 LUT2=1 LUT6=1)
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.035ns = ( 15.035 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.335ns
+    Clock Pessimism Removal (CPR):    0.275ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          1.732     5.335    uart_transmitter_init/Baud_controller_tx_inst/clk_IBUF_BUFG
+    SLICE_X86Y55         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X86Y55         FDCE (Prop_fdce_C_Q)         0.456     5.791 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]/Q
+                         net (fo=2, routed)           0.909     6.700    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]
+    SLICE_X88Y55         LUT6 (Prop_lut6_I4_O)        0.124     6.824 r  uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_i_2/O
+                         net (fo=1, routed)           0.000     6.824    uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_i_2_n_0
+    SLICE_X88Y55         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     7.337 r  uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.337    uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_n_0
+    SLICE_X88Y56         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.229     7.566 f  uart_transmitter_init/Baud_controller_tx_inst/check1_carry__1/CO[2]
+                         net (fo=20, routed)          1.126     8.691    uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_i_1[0]
+    SLICE_X86Y52         LUT2 (Prop_lut2_I1_O)        0.310     9.001 r  uart_transmitter_init/Baud_controller_tx_inst/counter[0]_i_6/O
+                         net (fo=1, routed)           0.000     9.001    uart_transmitter_init/Baud_controller_tx_inst/counter[0]_i_6_n_0
+    SLICE_X86Y52         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.533 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.533    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[0]_i_1_n_0
+    SLICE_X86Y53         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.647 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.647    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[4]_i_1_n_0
+    SLICE_X86Y54         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     9.981 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[8]_i_1/O[1]
+                         net (fo=1, routed)           0.000     9.981    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[8]_i_1_n_6
+    SLICE_X86Y54         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          1.612    15.035    uart_transmitter_init/Baud_controller_tx_inst/clk_IBUF_BUFG
+    SLICE_X86Y54         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[9]/C
+                         clock pessimism              0.275    15.310    
+                         clock uncertainty           -0.035    15.274    
+    SLICE_X86Y54         FDCE (Setup_fdce_C_D)        0.062    15.336    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[9]
+  -------------------------------------------------------------------
+                         required time                         15.336    
+                         arrival time                          -9.981    
+  -------------------------------------------------------------------
+                         slack                                  5.355    
+
+Slack (MET) :             5.369ns  (required time - arrival time)
+  Source:                 uart_transmitter_init/Baud_controller_tx_inst/counter_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk rise@10.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        4.631ns  (logic 2.752ns (59.424%)  route 1.879ns (40.576%))
+  Logic Levels:           9  (CARRY4=7 LUT2=1 LUT6=1)
+  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.035ns = ( 15.035 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.336ns
+    Clock Pessimism Removal (CPR):    0.275ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          1.733     5.336    uart_transmitter_init/Baud_controller_tx_inst/clk_IBUF_BUFG
+    SLICE_X86Y52         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X86Y52         FDCE (Prop_fdce_C_Q)         0.456     5.792 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[3]/Q
+                         net (fo=2, routed)           0.753     6.545    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[3]
+    SLICE_X88Y54         LUT6 (Prop_lut6_I2_O)        0.124     6.669 r  uart_transmitter_init/Baud_controller_tx_inst/check1_carry_i_3/O
+                         net (fo=1, routed)           0.000     6.669    uart_transmitter_init/Baud_controller_tx_inst/check1_carry_i_3_n_0
+    SLICE_X88Y54         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     7.202 r  uart_transmitter_init/Baud_controller_tx_inst/check1_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.202    uart_transmitter_init/Baud_controller_tx_inst/check1_carry_n_0
+    SLICE_X88Y55         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.319 r  uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.319    uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_n_0
+    SLICE_X88Y56         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.229     7.548 f  uart_transmitter_init/Baud_controller_tx_inst/check1_carry__1/CO[2]
+                         net (fo=20, routed)          1.126     8.674    uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_i_1[0]
+    SLICE_X86Y52         LUT2 (Prop_lut2_I1_O)        0.310     8.984 r  uart_transmitter_init/Baud_controller_tx_inst/counter[0]_i_6/O
+                         net (fo=1, routed)           0.000     8.984    uart_transmitter_init/Baud_controller_tx_inst/counter[0]_i_6_n_0
+    SLICE_X86Y52         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.516 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.516    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[0]_i_1_n_0
+    SLICE_X86Y53         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.630 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.630    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[4]_i_1_n_0
+    SLICE_X86Y54         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.744 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.744    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[8]_i_1_n_0
+    SLICE_X86Y55         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.223     9.967 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]_i_1/O[0]
+                         net (fo=1, routed)           0.000     9.967    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]_i_1_n_7
+    SLICE_X86Y55         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          1.612    15.035    uart_transmitter_init/Baud_controller_tx_inst/clk_IBUF_BUFG
+    SLICE_X86Y55         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]/C
+                         clock pessimism              0.275    15.310    
+                         clock uncertainty           -0.035    15.274    
+    SLICE_X86Y55         FDCE (Setup_fdce_C_D)        0.062    15.336    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]
+  -------------------------------------------------------------------
+                         required time                         15.336    
+                         arrival time                          -9.967    
+  -------------------------------------------------------------------
+                         slack                                  5.369    
+
+Slack (MET) :             5.376ns  (required time - arrival time)
+  Source:                 uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            uart_transmitter_init/Baud_controller_tx_inst/counter_reg[11]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk rise@10.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        4.626ns  (logic 2.591ns (56.012%)  route 2.035ns (43.988%))
+  Logic Levels:           7  (CARRY4=5 LUT2=1 LUT6=1)
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.035ns = ( 15.035 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.335ns
+    Clock Pessimism Removal (CPR):    0.275ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          1.732     5.335    uart_transmitter_init/Baud_controller_tx_inst/clk_IBUF_BUFG
+    SLICE_X86Y55         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X86Y55         FDCE (Prop_fdce_C_Q)         0.456     5.791 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]/Q
+                         net (fo=2, routed)           0.909     6.700    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]
+    SLICE_X88Y55         LUT6 (Prop_lut6_I4_O)        0.124     6.824 r  uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_i_2/O
+                         net (fo=1, routed)           0.000     6.824    uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_i_2_n_0
+    SLICE_X88Y55         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     7.337 r  uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.337    uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_n_0
+    SLICE_X88Y56         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.229     7.566 f  uart_transmitter_init/Baud_controller_tx_inst/check1_carry__1/CO[2]
+                         net (fo=20, routed)          1.126     8.691    uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_i_1[0]
+    SLICE_X86Y52         LUT2 (Prop_lut2_I1_O)        0.310     9.001 r  uart_transmitter_init/Baud_controller_tx_inst/counter[0]_i_6/O
+                         net (fo=1, routed)           0.000     9.001    uart_transmitter_init/Baud_controller_tx_inst/counter[0]_i_6_n_0
+    SLICE_X86Y52         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.533 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.533    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[0]_i_1_n_0
+    SLICE_X86Y53         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.647 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.647    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[4]_i_1_n_0
+    SLICE_X86Y54         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     9.960 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[8]_i_1/O[3]
+                         net (fo=1, routed)           0.000     9.960    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[8]_i_1_n_4
+    SLICE_X86Y54         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          1.612    15.035    uart_transmitter_init/Baud_controller_tx_inst/clk_IBUF_BUFG
+    SLICE_X86Y54         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[11]/C
+                         clock pessimism              0.275    15.310    
+                         clock uncertainty           -0.035    15.274    
+    SLICE_X86Y54         FDCE (Setup_fdce_C_D)        0.062    15.336    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[11]
+  -------------------------------------------------------------------
+                         required time                         15.336    
+                         arrival time                          -9.960    
+  -------------------------------------------------------------------
+                         slack                                  5.376    
+
+Slack (MET) :             5.381ns  (required time - arrival time)
+  Source:                 uart_reciever_init/Baud_controller_tx_inst/counter_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            uart_reciever_init/Baud_controller_tx_inst/counter_reg[13]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk rise@10.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        4.667ns  (logic 2.919ns (62.545%)  route 1.748ns (37.455%))
+  Logic Levels:           9  (CARRY4=7 LUT2=1 LUT6=1)
+  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.032ns = ( 15.032 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.333ns
+    Clock Pessimism Removal (CPR):    0.275ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          1.730     5.333    uart_reciever_init/Baud_controller_tx_inst/clk_IBUF_BUFG
+    SLICE_X84Y54         FDCE                                         r  uart_reciever_init/Baud_controller_tx_inst/counter_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X84Y54         FDCE (Prop_fdce_C_Q)         0.518     5.851 r  uart_reciever_init/Baud_controller_tx_inst/counter_reg[0]/Q
+                         net (fo=3, routed)           0.728     6.579    uart_reciever_init/Baud_controller_tx_inst/counter_reg[0]
+    SLICE_X85Y55         LUT6 (Prop_lut6_I1_O)        0.124     6.703 r  uart_reciever_init/Baud_controller_tx_inst/check1_carry_i_4__0/O
+                         net (fo=1, routed)           0.000     6.703    uart_reciever_init/Baud_controller_tx_inst/check1_carry_i_4__0_n_0
+    SLICE_X85Y55         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     7.235 r  uart_reciever_init/Baud_controller_tx_inst/check1_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.235    uart_reciever_init/Baud_controller_tx_inst/check1_carry_n_0
+    SLICE_X85Y56         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.349 r  uart_reciever_init/Baud_controller_tx_inst/check1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.349    uart_reciever_init/Baud_controller_tx_inst/check1_carry__0_n_0
+    SLICE_X85Y57         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     7.577 f  uart_reciever_init/Baud_controller_tx_inst/check1_carry__1/CO[2]
+                         net (fo=18, routed)          1.020     8.597    uart_reciever_init/Baud_controller_tx_inst/sample_ENABLE
+    SLICE_X84Y54         LUT2 (Prop_lut2_I1_O)        0.313     8.910 r  uart_reciever_init/Baud_controller_tx_inst/counter[0]_i_5__0/O
+                         net (fo=1, routed)           0.000     8.910    uart_reciever_init/Baud_controller_tx_inst/counter[0]_i_5__0_n_0
+    SLICE_X84Y54         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     9.443 r  uart_reciever_init/Baud_controller_tx_inst/counter_reg[0]_i_1__0/CO[3]
+                         net (fo=1, routed)           0.000     9.443    uart_reciever_init/Baud_controller_tx_inst/counter_reg[0]_i_1__0_n_0
+    SLICE_X84Y55         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.560 r  uart_reciever_init/Baud_controller_tx_inst/counter_reg[4]_i_1__0/CO[3]
+                         net (fo=1, routed)           0.000     9.560    uart_reciever_init/Baud_controller_tx_inst/counter_reg[4]_i_1__0_n_0
+    SLICE_X84Y56         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.677 r  uart_reciever_init/Baud_controller_tx_inst/counter_reg[8]_i_1__0/CO[3]
+                         net (fo=1, routed)           0.000     9.677    uart_reciever_init/Baud_controller_tx_inst/counter_reg[8]_i_1__0_n_0
+    SLICE_X84Y57         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    10.000 r  uart_reciever_init/Baud_controller_tx_inst/counter_reg[12]_i_1__0/O[1]
+                         net (fo=1, routed)           0.000    10.000    uart_reciever_init/Baud_controller_tx_inst/counter_reg[12]_i_1__0_n_6
+    SLICE_X84Y57         FDCE                                         r  uart_reciever_init/Baud_controller_tx_inst/counter_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          1.609    15.032    uart_reciever_init/Baud_controller_tx_inst/clk_IBUF_BUFG
+    SLICE_X84Y57         FDCE                                         r  uart_reciever_init/Baud_controller_tx_inst/counter_reg[13]/C
+                         clock pessimism              0.275    15.307    
+                         clock uncertainty           -0.035    15.271    
+    SLICE_X84Y57         FDCE (Setup_fdce_C_D)        0.109    15.380    uart_reciever_init/Baud_controller_tx_inst/counter_reg[13]
+  -------------------------------------------------------------------
+                         required time                         15.380    
+                         arrival time                         -10.000    
+  -------------------------------------------------------------------
+                         slack                                  5.381    
+
+Slack (MET) :             5.450ns  (required time - arrival time)
+  Source:                 uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            uart_transmitter_init/Baud_controller_tx_inst/counter_reg[10]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk rise@10.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        4.552ns  (logic 2.517ns (55.297%)  route 2.035ns (44.703%))
+  Logic Levels:           7  (CARRY4=5 LUT2=1 LUT6=1)
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.035ns = ( 15.035 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.335ns
+    Clock Pessimism Removal (CPR):    0.275ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          1.732     5.335    uart_transmitter_init/Baud_controller_tx_inst/clk_IBUF_BUFG
+    SLICE_X86Y55         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X86Y55         FDCE (Prop_fdce_C_Q)         0.456     5.791 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]/Q
+                         net (fo=2, routed)           0.909     6.700    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]
+    SLICE_X88Y55         LUT6 (Prop_lut6_I4_O)        0.124     6.824 r  uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_i_2/O
+                         net (fo=1, routed)           0.000     6.824    uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_i_2_n_0
+    SLICE_X88Y55         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     7.337 r  uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.337    uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_n_0
+    SLICE_X88Y56         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.229     7.566 f  uart_transmitter_init/Baud_controller_tx_inst/check1_carry__1/CO[2]
+                         net (fo=20, routed)          1.126     8.691    uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_i_1[0]
+    SLICE_X86Y52         LUT2 (Prop_lut2_I1_O)        0.310     9.001 r  uart_transmitter_init/Baud_controller_tx_inst/counter[0]_i_6/O
+                         net (fo=1, routed)           0.000     9.001    uart_transmitter_init/Baud_controller_tx_inst/counter[0]_i_6_n_0
+    SLICE_X86Y52         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.533 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.533    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[0]_i_1_n_0
+    SLICE_X86Y53         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.647 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.647    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[4]_i_1_n_0
+    SLICE_X86Y54         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     9.886 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[8]_i_1/O[2]
+                         net (fo=1, routed)           0.000     9.886    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[8]_i_1_n_5
+    SLICE_X86Y54         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          1.612    15.035    uart_transmitter_init/Baud_controller_tx_inst/clk_IBUF_BUFG
+    SLICE_X86Y54         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[10]/C
+                         clock pessimism              0.275    15.310    
+                         clock uncertainty           -0.035    15.274    
+    SLICE_X86Y54         FDCE (Setup_fdce_C_D)        0.062    15.336    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[10]
+  -------------------------------------------------------------------
+                         required time                         15.336    
+                         arrival time                          -9.886    
+  -------------------------------------------------------------------
+                         slack                                  5.450    
+
+Slack (MET) :             5.465ns  (required time - arrival time)
+  Source:                 uart_reciever_init/Baud_controller_tx_inst/counter_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            uart_reciever_init/Baud_controller_tx_inst/counter_reg[14]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk rise@10.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        4.583ns  (logic 2.835ns (61.858%)  route 1.748ns (38.142%))
+  Logic Levels:           9  (CARRY4=7 LUT2=1 LUT6=1)
+  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.032ns = ( 15.032 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.333ns
+    Clock Pessimism Removal (CPR):    0.275ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          1.730     5.333    uart_reciever_init/Baud_controller_tx_inst/clk_IBUF_BUFG
+    SLICE_X84Y54         FDCE                                         r  uart_reciever_init/Baud_controller_tx_inst/counter_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X84Y54         FDCE (Prop_fdce_C_Q)         0.518     5.851 r  uart_reciever_init/Baud_controller_tx_inst/counter_reg[0]/Q
+                         net (fo=3, routed)           0.728     6.579    uart_reciever_init/Baud_controller_tx_inst/counter_reg[0]
+    SLICE_X85Y55         LUT6 (Prop_lut6_I1_O)        0.124     6.703 r  uart_reciever_init/Baud_controller_tx_inst/check1_carry_i_4__0/O
+                         net (fo=1, routed)           0.000     6.703    uart_reciever_init/Baud_controller_tx_inst/check1_carry_i_4__0_n_0
+    SLICE_X85Y55         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     7.235 r  uart_reciever_init/Baud_controller_tx_inst/check1_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.235    uart_reciever_init/Baud_controller_tx_inst/check1_carry_n_0
+    SLICE_X85Y56         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.349 r  uart_reciever_init/Baud_controller_tx_inst/check1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.349    uart_reciever_init/Baud_controller_tx_inst/check1_carry__0_n_0
+    SLICE_X85Y57         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     7.577 f  uart_reciever_init/Baud_controller_tx_inst/check1_carry__1/CO[2]
+                         net (fo=18, routed)          1.020     8.597    uart_reciever_init/Baud_controller_tx_inst/sample_ENABLE
+    SLICE_X84Y54         LUT2 (Prop_lut2_I1_O)        0.313     8.910 r  uart_reciever_init/Baud_controller_tx_inst/counter[0]_i_5__0/O
+                         net (fo=1, routed)           0.000     8.910    uart_reciever_init/Baud_controller_tx_inst/counter[0]_i_5__0_n_0
+    SLICE_X84Y54         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     9.443 r  uart_reciever_init/Baud_controller_tx_inst/counter_reg[0]_i_1__0/CO[3]
+                         net (fo=1, routed)           0.000     9.443    uart_reciever_init/Baud_controller_tx_inst/counter_reg[0]_i_1__0_n_0
+    SLICE_X84Y55         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.560 r  uart_reciever_init/Baud_controller_tx_inst/counter_reg[4]_i_1__0/CO[3]
+                         net (fo=1, routed)           0.000     9.560    uart_reciever_init/Baud_controller_tx_inst/counter_reg[4]_i_1__0_n_0
+    SLICE_X84Y56         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.677 r  uart_reciever_init/Baud_controller_tx_inst/counter_reg[8]_i_1__0/CO[3]
+                         net (fo=1, routed)           0.000     9.677    uart_reciever_init/Baud_controller_tx_inst/counter_reg[8]_i_1__0_n_0
+    SLICE_X84Y57         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     9.916 r  uart_reciever_init/Baud_controller_tx_inst/counter_reg[12]_i_1__0/O[2]
+                         net (fo=1, routed)           0.000     9.916    uart_reciever_init/Baud_controller_tx_inst/counter_reg[12]_i_1__0_n_5
+    SLICE_X84Y57         FDCE                                         r  uart_reciever_init/Baud_controller_tx_inst/counter_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          1.609    15.032    uart_reciever_init/Baud_controller_tx_inst/clk_IBUF_BUFG
+    SLICE_X84Y57         FDCE                                         r  uart_reciever_init/Baud_controller_tx_inst/counter_reg[14]/C
+                         clock pessimism              0.275    15.307    
+                         clock uncertainty           -0.035    15.271    
+    SLICE_X84Y57         FDCE (Setup_fdce_C_D)        0.109    15.380    uart_reciever_init/Baud_controller_tx_inst/counter_reg[14]
+  -------------------------------------------------------------------
+                         required time                         15.380    
+                         arrival time                          -9.916    
+  -------------------------------------------------------------------
+                         slack                                  5.465    
+
+Slack (MET) :             5.466ns  (required time - arrival time)
+  Source:                 uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            uart_transmitter_init/Baud_controller_tx_inst/counter_reg[8]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk rise@10.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        4.536ns  (logic 2.501ns (55.139%)  route 2.035ns (44.861%))
+  Logic Levels:           7  (CARRY4=5 LUT2=1 LUT6=1)
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.035ns = ( 15.035 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.335ns
+    Clock Pessimism Removal (CPR):    0.275ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          1.732     5.335    uart_transmitter_init/Baud_controller_tx_inst/clk_IBUF_BUFG
+    SLICE_X86Y55         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X86Y55         FDCE (Prop_fdce_C_Q)         0.456     5.791 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]/Q
+                         net (fo=2, routed)           0.909     6.700    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]
+    SLICE_X88Y55         LUT6 (Prop_lut6_I4_O)        0.124     6.824 r  uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_i_2/O
+                         net (fo=1, routed)           0.000     6.824    uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_i_2_n_0
+    SLICE_X88Y55         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     7.337 r  uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.337    uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_n_0
+    SLICE_X88Y56         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.229     7.566 f  uart_transmitter_init/Baud_controller_tx_inst/check1_carry__1/CO[2]
+                         net (fo=20, routed)          1.126     8.691    uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_i_1[0]
+    SLICE_X86Y52         LUT2 (Prop_lut2_I1_O)        0.310     9.001 r  uart_transmitter_init/Baud_controller_tx_inst/counter[0]_i_6/O
+                         net (fo=1, routed)           0.000     9.001    uart_transmitter_init/Baud_controller_tx_inst/counter[0]_i_6_n_0
+    SLICE_X86Y52         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.533 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.533    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[0]_i_1_n_0
+    SLICE_X86Y53         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.647 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.647    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[4]_i_1_n_0
+    SLICE_X86Y54         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.223     9.870 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[8]_i_1/O[0]
+                         net (fo=1, routed)           0.000     9.870    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[8]_i_1_n_7
+    SLICE_X86Y54         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          1.612    15.035    uart_transmitter_init/Baud_controller_tx_inst/clk_IBUF_BUFG
+    SLICE_X86Y54         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[8]/C
+                         clock pessimism              0.275    15.310    
+                         clock uncertainty           -0.035    15.274    
+    SLICE_X86Y54         FDCE (Setup_fdce_C_D)        0.062    15.336    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[8]
+  -------------------------------------------------------------------
+                         required time                         15.336    
+                         arrival time                          -9.870    
+  -------------------------------------------------------------------
+                         slack                                  5.466    
+
+Slack (MET) :             5.469ns  (required time - arrival time)
+  Source:                 uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            uart_transmitter_init/Baud_controller_tx_inst/counter_reg[5]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk rise@10.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        4.533ns  (logic 2.498ns (55.110%)  route 2.035ns (44.890%))
+  Logic Levels:           6  (CARRY4=4 LUT2=1 LUT6=1)
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.035ns = ( 15.035 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.335ns
+    Clock Pessimism Removal (CPR):    0.275ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          1.732     5.335    uart_transmitter_init/Baud_controller_tx_inst/clk_IBUF_BUFG
+    SLICE_X86Y55         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X86Y55         FDCE (Prop_fdce_C_Q)         0.456     5.791 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]/Q
+                         net (fo=2, routed)           0.909     6.700    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[12]
+    SLICE_X88Y55         LUT6 (Prop_lut6_I4_O)        0.124     6.824 r  uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_i_2/O
+                         net (fo=1, routed)           0.000     6.824    uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_i_2_n_0
+    SLICE_X88Y55         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     7.337 r  uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.337    uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_n_0
+    SLICE_X88Y56         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.229     7.566 f  uart_transmitter_init/Baud_controller_tx_inst/check1_carry__1/CO[2]
+                         net (fo=20, routed)          1.126     8.691    uart_transmitter_init/Baud_controller_tx_inst/check1_carry__0_i_1[0]
+    SLICE_X86Y52         LUT2 (Prop_lut2_I1_O)        0.310     9.001 r  uart_transmitter_init/Baud_controller_tx_inst/counter[0]_i_6/O
+                         net (fo=1, routed)           0.000     9.001    uart_transmitter_init/Baud_controller_tx_inst/counter[0]_i_6_n_0
+    SLICE_X86Y52         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.533 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.533    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[0]_i_1_n_0
+    SLICE_X86Y53         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     9.867 r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[4]_i_1/O[1]
+                         net (fo=1, routed)           0.000     9.867    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[4]_i_1_n_6
+    SLICE_X86Y53         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          1.612    15.035    uart_transmitter_init/Baud_controller_tx_inst/clk_IBUF_BUFG
+    SLICE_X86Y53         FDCE                                         r  uart_transmitter_init/Baud_controller_tx_inst/counter_reg[5]/C
+                         clock pessimism              0.275    15.310    
+                         clock uncertainty           -0.035    15.274    
+    SLICE_X86Y53         FDCE (Setup_fdce_C_D)        0.062    15.336    uart_transmitter_init/Baud_controller_tx_inst/counter_reg[5]
+  -------------------------------------------------------------------
+                         required time                         15.336    
+                         arrival time                          -9.867    
+  -------------------------------------------------------------------
+                         slack                                  5.469    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.168ns  (arrival time - required time)
+  Source:                 uart_transmitter_init/FSM_onehot_current_state_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            uart_transmitter_init/FSM_onehot_current_state_reg[3]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.228ns  (logic 0.141ns (61.744%)  route 0.087ns (38.255%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.043ns
+    Source Clock Delay      (SCD):    1.525ns
+    Clock Pessimism Removal (CPR):    0.504ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          0.606     1.525    uart_transmitter_init/clk_IBUF_BUFG
+    SLICE_X86Y59         FDCE                                         r  uart_transmitter_init/FSM_onehot_current_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X86Y59         FDCE (Prop_fdce_C_Q)         0.141     1.666 r  uart_transmitter_init/FSM_onehot_current_state_reg[2]/Q
+                         net (fo=4, routed)           0.087     1.754    uart_transmitter_init/FSM_onehot_current_state_reg_n_0_[2]
+    SLICE_X87Y59         FDCE                                         r  uart_transmitter_init/FSM_onehot_current_state_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          0.878     2.043    uart_transmitter_init/clk_IBUF_BUFG
+    SLICE_X87Y59         FDCE                                         r  uart_transmitter_init/FSM_onehot_current_state_reg[3]/C
+                         clock pessimism             -0.504     1.538    
+    SLICE_X87Y59         FDCE (Hold_fdce_C_D)         0.047     1.585    uart_transmitter_init/FSM_onehot_current_state_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.585    
+                         arrival time                           1.754    
+  -------------------------------------------------------------------
+                         slack                                  0.168    
+
+Slack (MET) :             0.199ns  (arrival time - required time)
+  Source:                 uart_reciever_init/Sipo_inst/tmp_reg[4]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            uart_reciever_init/Sipo_inst/tmp_reg[5]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.264ns  (logic 0.141ns (53.429%)  route 0.123ns (46.571%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.043ns
+    Source Clock Delay      (SCD):    1.525ns
+    Clock Pessimism Removal (CPR):    0.504ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          0.606     1.525    uart_reciever_init/Sipo_inst/clk_IBUF_BUFG
+    SLICE_X89Y57         FDCE                                         r  uart_reciever_init/Sipo_inst/tmp_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X89Y57         FDCE (Prop_fdce_C_Q)         0.141     1.666 r  uart_reciever_init/Sipo_inst/tmp_reg[4]/Q
+                         net (fo=3, routed)           0.123     1.789    uart_reciever_init/Sipo_inst/tmp[3]
+    SLICE_X88Y57         FDCE                                         r  uart_reciever_init/Sipo_inst/tmp_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          0.878     2.043    uart_reciever_init/Sipo_inst/clk_IBUF_BUFG
+    SLICE_X88Y57         FDCE                                         r  uart_reciever_init/Sipo_inst/tmp_reg[5]/C
+                         clock pessimism             -0.504     1.538    
+    SLICE_X88Y57         FDCE (Hold_fdce_C_D)         0.052     1.590    uart_reciever_init/Sipo_inst/tmp_reg[5]
+  -------------------------------------------------------------------
+                         required time                         -1.590    
+                         arrival time                           1.789    
+  -------------------------------------------------------------------
+                         slack                                  0.199    
+
+Slack (MET) :             0.199ns  (arrival time - required time)
+  Source:                 synchroniser_reg/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            synchroniser_out_reg/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.274ns  (logic 0.164ns (59.853%)  route 0.110ns (40.147%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.043ns
+    Source Clock Delay      (SCD):    1.525ns
+    Clock Pessimism Removal (CPR):    0.501ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          0.606     1.525    clk_IBUF_BUFG
+    SLICE_X88Y59         FDCE                                         r  synchroniser_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X88Y59         FDCE (Prop_fdce_C_Q)         0.164     1.689 r  synchroniser_reg/Q
+                         net (fo=1, routed)           0.110     1.799    synchroniser
+    SLICE_X88Y58         FDCE                                         r  synchroniser_out_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          0.878     2.043    clk_IBUF_BUFG
+    SLICE_X88Y58         FDCE                                         r  synchroniser_out_reg/C
+                         clock pessimism             -0.501     1.541    
+    SLICE_X88Y58         FDCE (Hold_fdce_C_D)         0.059     1.600    synchroniser_out_reg
+  -------------------------------------------------------------------
+                         required time                         -1.600    
+                         arrival time                           1.799    
+  -------------------------------------------------------------------
+                         slack                                  0.199    
+
+Slack (MET) :             0.201ns  (arrival time - required time)
+  Source:                 uart_transmitter_init/FSM_onehot_current_state_reg[13]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            uart_transmitter_init/FSM_onehot_current_state_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.305ns  (logic 0.186ns (60.969%)  route 0.119ns (39.031%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.043ns
+    Source Clock Delay      (SCD):    1.525ns
+    Clock Pessimism Removal (CPR):    0.504ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          0.606     1.525    uart_transmitter_init/clk_IBUF_BUFG
+    SLICE_X87Y59         FDCE                                         r  uart_transmitter_init/FSM_onehot_current_state_reg[13]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X87Y59         FDCE (Prop_fdce_C_Q)         0.141     1.666 r  uart_transmitter_init/FSM_onehot_current_state_reg[13]/Q
+                         net (fo=3, routed)           0.119     1.785    uart_transmitter_init/FSM_onehot_current_state_reg_n_0_[13]
+    SLICE_X86Y59         LUT6 (Prop_lut6_I1_O)        0.045     1.830 r  uart_transmitter_init/FSM_onehot_current_state[1]_i_1/O
+                         net (fo=1, routed)           0.000     1.830    uart_transmitter_init/FSM_onehot_current_state[1]_i_1_n_0
+    SLICE_X86Y59         FDCE                                         r  uart_transmitter_init/FSM_onehot_current_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          0.878     2.043    uart_transmitter_init/clk_IBUF_BUFG
+    SLICE_X86Y59         FDCE                                         r  uart_transmitter_init/FSM_onehot_current_state_reg[1]/C
+                         clock pessimism             -0.504     1.538    
+    SLICE_X86Y59         FDCE (Hold_fdce_C_D)         0.091     1.629    uart_transmitter_init/FSM_onehot_current_state_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.629    
+                         arrival time                           1.830    
+  -------------------------------------------------------------------
+                         slack                                  0.201    
+
+Slack (MET) :             0.202ns  (arrival time - required time)
+  Source:                 uart_reciever_init/FSM_onehot_current_state_reg[4]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            uart_reciever_init/FSM_onehot_current_state_reg[5]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.306ns  (logic 0.186ns (60.780%)  route 0.120ns (39.220%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.040ns
+    Source Clock Delay      (SCD):    1.523ns
+    Clock Pessimism Removal (CPR):    0.503ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          0.604     1.523    uart_reciever_init/clk_IBUF_BUFG
+    SLICE_X86Y62         FDCE                                         r  uart_reciever_init/FSM_onehot_current_state_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X86Y62         FDCE (Prop_fdce_C_Q)         0.141     1.664 r  uart_reciever_init/FSM_onehot_current_state_reg[4]/Q
+                         net (fo=4, routed)           0.120     1.784    uart_reciever_init/FSM_onehot_current_state_reg_n_0_[4]
+    SLICE_X87Y62         LUT6 (Prop_lut6_I0_O)        0.045     1.829 r  uart_reciever_init/FSM_onehot_current_state[5]_i_1/O
+                         net (fo=1, routed)           0.000     1.829    uart_reciever_init/FSM_onehot_current_state[5]_i_1_n_0
+    SLICE_X87Y62         FDCE                                         r  uart_reciever_init/FSM_onehot_current_state_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          0.875     2.040    uart_reciever_init/clk_IBUF_BUFG
+    SLICE_X87Y62         FDCE                                         r  uart_reciever_init/FSM_onehot_current_state_reg[5]/C
+                         clock pessimism             -0.503     1.536    
+    SLICE_X87Y62         FDCE (Hold_fdce_C_D)         0.091     1.627    uart_reciever_init/FSM_onehot_current_state_reg[5]
+  -------------------------------------------------------------------
+                         required time                         -1.627    
+                         arrival time                           1.829    
+  -------------------------------------------------------------------
+                         slack                                  0.202    
+
+Slack (MET) :             0.203ns  (arrival time - required time)
+  Source:                 uart_reciever_init/FSM_onehot_current_state_reg[7]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            uart_reciever_init/FSM_onehot_current_state_reg[8]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.341ns  (logic 0.209ns (61.246%)  route 0.132ns (38.754%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.017ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.042ns
+    Source Clock Delay      (SCD):    1.523ns
+    Clock Pessimism Removal (CPR):    0.501ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          0.604     1.523    uart_reciever_init/clk_IBUF_BUFG
+    SLICE_X88Y62         FDCE                                         r  uart_reciever_init/FSM_onehot_current_state_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X88Y62         FDCE (Prop_fdce_C_Q)         0.164     1.687 r  uart_reciever_init/FSM_onehot_current_state_reg[7]/Q
+                         net (fo=4, routed)           0.132     1.820    uart_reciever_init/FSM_onehot_current_state_reg_n_0_[7]
+    SLICE_X88Y61         LUT6 (Prop_lut6_I0_O)        0.045     1.865 r  uart_reciever_init/FSM_onehot_current_state[8]_i_1/O
+                         net (fo=1, routed)           0.000     1.865    uart_reciever_init/FSM_onehot_current_state[8]_i_1_n_0
+    SLICE_X88Y61         FDCE                                         r  uart_reciever_init/FSM_onehot_current_state_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          0.877     2.042    uart_reciever_init/clk_IBUF_BUFG
+    SLICE_X88Y61         FDCE                                         r  uart_reciever_init/FSM_onehot_current_state_reg[8]/C
+                         clock pessimism             -0.501     1.540    
+    SLICE_X88Y61         FDCE (Hold_fdce_C_D)         0.121     1.661    uart_reciever_init/FSM_onehot_current_state_reg[8]
+  -------------------------------------------------------------------
+                         required time                         -1.661    
+                         arrival time                           1.865    
+  -------------------------------------------------------------------
+                         slack                                  0.203    
+
+Slack (MET) :             0.205ns  (arrival time - required time)
+  Source:                 uart_reciever_init/FSM_onehot_current_state_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            uart_reciever_init/FSM_onehot_current_state_reg[2]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.349ns  (logic 0.187ns (53.534%)  route 0.162ns (46.466%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.042ns
+    Source Clock Delay      (SCD):    1.524ns
+    Clock Pessimism Removal (CPR):    0.504ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          0.605     1.524    uart_reciever_init/clk_IBUF_BUFG
+    SLICE_X89Y60         FDCE                                         r  uart_reciever_init/FSM_onehot_current_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X89Y60         FDCE (Prop_fdce_C_Q)         0.141     1.665 r  uart_reciever_init/FSM_onehot_current_state_reg[1]/Q
+                         net (fo=3, routed)           0.162     1.828    uart_reciever_init/FSM_onehot_current_state_reg_n_0_[1]
+    SLICE_X88Y60         LUT4 (Prop_lut4_I3_O)        0.046     1.874 r  uart_reciever_init/FSM_onehot_current_state[2]_i_1/O
+                         net (fo=1, routed)           0.000     1.874    uart_reciever_init/FSM_onehot_current_state[2]_i_1_n_0
+    SLICE_X88Y60         FDCE                                         r  uart_reciever_init/FSM_onehot_current_state_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          0.877     2.042    uart_reciever_init/clk_IBUF_BUFG
+    SLICE_X88Y60         FDCE                                         r  uart_reciever_init/FSM_onehot_current_state_reg[2]/C
+                         clock pessimism             -0.504     1.537    
+    SLICE_X88Y60         FDCE (Hold_fdce_C_D)         0.131     1.668    uart_reciever_init/FSM_onehot_current_state_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -1.668    
+                         arrival time                           1.874    
+  -------------------------------------------------------------------
+                         slack                                  0.205    
+
+Slack (MET) :             0.211ns  (arrival time - required time)
+  Source:                 uart_reciever_init/FSM_onehot_current_state_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            uart_reciever_init/FSM_onehot_current_state_reg[16]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.315ns  (logic 0.209ns (66.271%)  route 0.106ns (33.729%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.042ns
+    Source Clock Delay      (SCD):    1.524ns
+    Clock Pessimism Removal (CPR):    0.504ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          0.605     1.524    uart_reciever_init/clk_IBUF_BUFG
+    SLICE_X88Y61         FDCE                                         r  uart_reciever_init/FSM_onehot_current_state_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X88Y61         FDCE (Prop_fdce_C_Q)         0.164     1.688 r  uart_reciever_init/FSM_onehot_current_state_reg[11]/Q
+                         net (fo=4, routed)           0.106     1.795    uart_reciever_init/Sipo_inst/Q[0]
+    SLICE_X89Y61         LUT4 (Prop_lut4_I3_O)        0.045     1.840 r  uart_reciever_init/Sipo_inst/FSM_onehot_current_state[16]_i_2/O
+                         net (fo=1, routed)           0.000     1.840    uart_reciever_init/Sipo_inst_n_8
+    SLICE_X89Y61         FDCE                                         r  uart_reciever_init/FSM_onehot_current_state_reg[16]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          0.877     2.042    uart_reciever_init/clk_IBUF_BUFG
+    SLICE_X89Y61         FDCE                                         r  uart_reciever_init/FSM_onehot_current_state_reg[16]/C
+                         clock pessimism             -0.504     1.537    
+    SLICE_X89Y61         FDCE (Hold_fdce_C_D)         0.091     1.628    uart_reciever_init/FSM_onehot_current_state_reg[16]
+  -------------------------------------------------------------------
+                         required time                         -1.628    
+                         arrival time                           1.840    
+  -------------------------------------------------------------------
+                         slack                                  0.211    
+
+Slack (MET) :             0.216ns  (arrival time - required time)
+  Source:                 uart_reciever_init/Q1_reg/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            uart_reciever_init/Q2_reg/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.324ns  (logic 0.141ns (43.573%)  route 0.183ns (56.427%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.038ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.042ns
+    Source Clock Delay      (SCD):    1.524ns
+    Clock Pessimism Removal (CPR):    0.479ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          0.605     1.524    uart_reciever_init/clk_IBUF_BUFG
+    SLICE_X86Y61         FDRE                                         r  uart_reciever_init/Q1_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X86Y61         FDRE (Prop_fdre_C_Q)         0.141     1.665 r  uart_reciever_init/Q1_reg/Q
+                         net (fo=2, routed)           0.183     1.848    uart_reciever_init/Q1
+    SLICE_X85Y59         FDRE                                         r  uart_reciever_init/Q2_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          0.877     2.042    uart_reciever_init/clk_IBUF_BUFG
+    SLICE_X85Y59         FDRE                                         r  uart_reciever_init/Q2_reg/C
+                         clock pessimism             -0.479     1.562    
+    SLICE_X85Y59         FDRE (Hold_fdre_C_D)         0.070     1.632    uart_reciever_init/Q2_reg
+  -------------------------------------------------------------------
+                         required time                         -1.632    
+                         arrival time                           1.848    
+  -------------------------------------------------------------------
+                         slack                                  0.216    
+
+Slack (MET) :             0.241ns  (arrival time - required time)
+  Source:                 uart_transmitter_init/FSM_onehot_current_state_reg[7]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            uart_transmitter_init/FSM_onehot_current_state_reg[8]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.264ns  (logic 0.128ns (48.576%)  route 0.136ns (51.424%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.043ns
+    Source Clock Delay      (SCD):    1.525ns
+    Clock Pessimism Removal (CPR):    0.517ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          0.606     1.525    uart_transmitter_init/clk_IBUF_BUFG
+    SLICE_X87Y59         FDCE                                         r  uart_transmitter_init/FSM_onehot_current_state_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X87Y59         FDCE (Prop_fdce_C_Q)         0.128     1.653 r  uart_transmitter_init/FSM_onehot_current_state_reg[7]/Q
+                         net (fo=3, routed)           0.136     1.789    uart_transmitter_init/FSM_onehot_current_state_reg_n_0_[7]
+    SLICE_X87Y59         FDCE                                         r  uart_transmitter_init/FSM_onehot_current_state_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=85, routed)          0.878     2.043    uart_transmitter_init/clk_IBUF_BUFG
+    SLICE_X87Y59         FDCE                                         r  uart_transmitter_init/FSM_onehot_current_state_reg[8]/C
+                         clock pessimism             -0.517     1.525    
+    SLICE_X87Y59         FDCE (Hold_fdce_C_D)         0.023     1.548    uart_transmitter_init/FSM_onehot_current_state_reg[8]
+  -------------------------------------------------------------------
+                         required time                         -1.548    
+                         arrival time                           1.789    
+  -------------------------------------------------------------------
+                         slack                                  0.241    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
+Min Period        n/a     BUFG/I   n/a            2.155         10.000      7.845      BUFGCTRL_X0Y16  clk_IBUF_BUFG_inst/I
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X88Y58    synchroniser_out_reg/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X88Y59    synchroniser_reg/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X84Y54    uart_reciever_init/Baud_controller_tx_inst/counter_reg[0]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X84Y56    uart_reciever_init/Baud_controller_tx_inst/counter_reg[10]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X84Y56    uart_reciever_init/Baud_controller_tx_inst/counter_reg[11]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X84Y57    uart_reciever_init/Baud_controller_tx_inst/counter_reg[13]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X84Y57    uart_reciever_init/Baud_controller_tx_inst/counter_reg[14]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X84Y54    uart_reciever_init/Baud_controller_tx_inst/counter_reg[1]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X84Y54    uart_reciever_init/Baud_controller_tx_inst/counter_reg[2]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X88Y61    uart_reciever_init/FSM_onehot_current_state_reg[11]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X89Y61    uart_reciever_init/FSM_onehot_current_state_reg[16]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X88Y61    uart_reciever_init/FSM_onehot_current_state_reg[8]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X86Y61    uart_reciever_init/Q1_reg/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X87Y61    uart_reciever_init/sampling_reg[0]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X87Y61    uart_reciever_init/sampling_reg[1]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X87Y61    uart_reciever_init/sampling_reg[2]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X87Y61    uart_reciever_init/sampling_reg[3]/C
+Low Pulse Width   Slow    FDPE/C   n/a            0.500         5.000       4.500      SLICE_X89Y61    uart_reciever_init/FSM_onehot_current_state_reg[0]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X88Y61    uart_reciever_init/FSM_onehot_current_state_reg[10]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X84Y57    uart_reciever_init/Baud_controller_tx_inst/counter_reg[13]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X84Y57    uart_reciever_init/Baud_controller_tx_inst/counter_reg[14]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X86Y62    uart_reciever_init/FSM_onehot_current_state_reg[4]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X87Y62    uart_reciever_init/FSM_onehot_current_state_reg[5]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X87Y62    uart_reciever_init/FSM_onehot_current_state_reg[6]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X88Y62    uart_reciever_init/FSM_onehot_current_state_reg[7]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X84Y57    uart_reciever_init/Baud_controller_tx_inst/counter_reg[12]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X88Y58    synchroniser_out_reg/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X88Y59    synchroniser_reg/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X84Y54    uart_reciever_init/Baud_controller_tx_inst/counter_reg[0]/C
+
+
+

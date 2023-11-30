@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"testbench_func_synth.v" \
+"../../../../../../RTL/part B/testbench_B.v" \
+
+# Do not sort compile order
+nosort

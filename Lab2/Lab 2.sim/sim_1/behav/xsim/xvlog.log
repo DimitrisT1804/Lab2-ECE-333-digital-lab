@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimar/Desktop/digital lab/lab 2/SIPO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SIPO
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimar/Desktop/digital lab/lab 2/RTL/part A/part A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Baud_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimar/Desktop/digital lab/lab 2/RTL/part B/part B.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_transmitter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimar/Desktop/digital lab/lab 2/partC2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_reciever
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jimar/Desktop/digital lab/lab 2/testbench_C.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_C

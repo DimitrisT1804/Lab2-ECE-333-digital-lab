@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../SIPO.v" \
+"../../../../../RTL/part A/part A.v" \
+"../../../../../RTL/part B/part B.v" \
+"../../../../../partC2.v" \
+"../../../../../testbench_C.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
